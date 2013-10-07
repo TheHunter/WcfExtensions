@@ -10,7 +10,7 @@ using WcfExtensions.Exceptions;
 namespace WcfExtensions
 {
     /// <summary>
-    /// 
+    /// An inspector for incoming / outgoing messages which uses actions when wcf operations are invoked.
     /// </summary>
     public class ActionMessageInspector
         : IDispatchMessageInspector

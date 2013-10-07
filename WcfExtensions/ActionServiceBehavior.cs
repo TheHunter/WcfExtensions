@@ -15,7 +15,7 @@ namespace WcfExtensions
     /// <summary>
     /// 
     /// </summary>
-    public class CustomServiceBehavior
+    public class ActionServiceBehavior
         : IServiceBehavior, IServiceActionProvider
     {
         private readonly Action incomingAction;
@@ -27,7 +27,7 @@ namespace WcfExtensions
         /// <param name="provider"></param>
         /// <param name="incomingActionMethod"></param>
         /// <param name="outgoingActionMethod"></param>
-        public CustomServiceBehavior(Type provider, string incomingActionMethod, string outgoingActionMethod)
+        public ActionServiceBehavior(Type provider, string incomingActionMethod, string outgoingActionMethod)
         {
             if (provider == null)
                 throw new ServiceArgumentException("The provider for getting ISessionFactory object cannot be null.", "provider");
@@ -65,7 +65,7 @@ namespace WcfExtensions
         /// </summary>
         /// <param name="incomingAction"></param>
         /// <param name="outgoingAction"></param>
-        public CustomServiceBehavior(Action incomingAction, Action outgoingAction)
+        public ActionServiceBehavior(Action incomingAction, Action outgoingAction)
         {
             if (incomingAction == null)
                 throw new ArgumentNullException("incomingAction", "Incoming sction cannot be null.");

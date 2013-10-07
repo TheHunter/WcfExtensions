@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25}</ProjectGuid>
+    <ProjectGuid>{669F1066-56FA-4ACC-ADBC-90FA77CA237E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WcfExtensions</RootNamespace>
-    <AssemblyName>WcfExtensions</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>WcfExtensions.net40</RootNamespace>
+    <AssemblyName>WcfExtensions.net40</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,22 +31,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionServiceBehavior.cs" />
-    <Compile Include="ActionMessageInspector.cs" />
-    <Compile Include="Configuration\ActionServiceBehaviorElement.cs" />
-    <Compile Include="Exceptions\ServiceArgumentException.cs" />
-    <Compile Include="Exceptions\ServiceBehaviorException.cs" />
-    <Compile Include="Exceptions\WcfServiceException.cs" />
-    <Compile Include="IServiceActionProvider.cs" />
+    <Compile Include="..\WcfExtensions\ActionMessageInspector.cs">
+      <Link>ActionMessageInspector.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\ActionServiceBehavior.cs">
+      <Link>ActionServiceBehavior.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\ActionServiceBehaviorElement.cs">
+      <Link>Configuration\ActionServiceBehaviorElement.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Exceptions\ServiceArgumentException.cs">
+      <Link>Exceptions\ServiceArgumentException.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Exceptions\ServiceBehaviorException.cs">
+      <Link>Exceptions\ServiceBehaviorException.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Exceptions\WcfServiceException.cs">
+      <Link>Exceptions\WcfServiceException.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\IServiceActionProvider.cs">
+      <Link>IServiceActionProvider.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
