@@ -44,6 +44,8 @@
     <Compile Include="ActionServiceBehavior.cs" />
     <Compile Include="ActionMessageInspector.cs" />
     <Compile Include="Configuration\ActionServiceBehaviorElement.cs" />
+    <Compile Include="Configuration\IBehaviorExtensionElement.cs" />
+    <Compile Include="Configuration\DefaultBehaviorExtensionElement.cs" />
     <Compile Include="Exceptions\ServiceArgumentException.cs" />
     <Compile Include="Exceptions\ServiceBehaviorException.cs" />
     <Compile Include="Exceptions\WcfServiceException.cs" />

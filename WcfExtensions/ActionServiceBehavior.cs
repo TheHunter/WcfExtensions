@@ -16,7 +16,7 @@ namespace WcfExtensions
     /// 
     /// </summary>
     public class ActionServiceBehavior
-        : IServiceBehavior, IServiceActionProvider
+        : Attribute, IServiceBehavior, IServiceActionProvider
     {
         private readonly Action incomingAction;
         private readonly Action outgoingAction;
@@ -50,9 +50,8 @@ namespace WcfExtensions
 
             try
             {
-                this.incomingAction = Delegate.CreateDelegate(typeof(Action), incomingMethod, false) as Action;
-                this.outgoingAction = Delegate.CreateDelegate(typeof(Action), outgoingMethod, false) as Action;
-
+                this.incomingAction = (Action) Delegate.CreateDelegate(typeof(Action), incomingMethod, true);
+                this.outgoingAction = (Action) Delegate.CreateDelegate(typeof(Action), outgoingMethod, true);
             }
             catch (Exception ex)
             {
@@ -68,10 +67,10 @@ namespace WcfExtensions
         public ActionServiceBehavior(Action incomingAction, Action outgoingAction)
         {
             if (incomingAction == null)
-                throw new ArgumentNullException("incomingAction", "Incoming sction cannot be null.");
+                throw new ServiceArgumentException("Incoming sction cannot be null.", "incomingAction");
 
             if (outgoingAction == null)
-                throw new ArgumentNullException("outgoingAction", "Outgoing sction cannot be null.");
+                throw new ServiceArgumentException("Outgoing sction cannot be null.", "outgoingAction");
 
             this.incomingAction = incomingAction;
             this.outgoingAction = outgoingAction;

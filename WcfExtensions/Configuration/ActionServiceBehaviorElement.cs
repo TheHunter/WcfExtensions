@@ -8,20 +8,11 @@ namespace WcfExtensions.Configuration
     /// <summary>
     /// A custom class for configuring service extension behaviors.
     /// </summary>
-    /// <typeparam name="TResource"></typeparam>
-    public class ActionServiceBehaviorElement<TResource>
-        : BehaviorExtensionElement
-        where TResource : class
+    /// <typeparam name="TBehavior"></typeparam>
+    public class ActionServiceBehaviorElement<TBehavior>
+        : DefaultBehaviorExtensionElement<TBehavior>
+        where TBehavior : class
     {
-        private readonly Type behaviorType;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ActionServiceBehaviorElement()
-        {
-            this.behaviorType = typeof (TResource); 
-        }
 
         /// <summary>
         /// 
@@ -68,13 +59,11 @@ namespace WcfExtensions.Configuration
         /// </summary>
         public Type ProviderType { get; private set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public override Type BehaviorType
-        {
-            get { return this.behaviorType; }
-        }
+        
+        //public override Type BehaviorType
+        //{
+        //    get { return this.behaviorType; }
+        //}
 
         /// <summary>
         /// 
@@ -100,7 +89,7 @@ namespace WcfExtensions.Configuration
         /// <returns></returns>
         protected override object CreateBehavior()
         {
-            return Activator.CreateInstance(this.behaviorType, this.ProviderType, this.IncomingTargetAction, this.OutgoingTargetAction);
+            return Activator.CreateInstance(this.BehaviorType, this.ProviderType, this.IncomingTargetAction, this.OutgoingTargetAction);
         }
     }
 }

@@ -1,6 +1,6 @@
 <h2 id="welcometoWcfExtensions">Welcome to WcfExtensions</h2>
 
-<p>WcfExtensions is a easy project which defines a set of basic classes for persistent entities.</p>
+<p>WcfExtensions is a easy project which defines a set of classes for configuring extension WCF behaviors.</p>
 
 
 <h2 id="licenses">Licenses</h2>
