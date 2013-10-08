@@ -11,7 +11,7 @@ namespace WcfExtensions.Configuration
     /// <typeparam name="TResource"></typeparam>
     public class ActionServiceBehaviorElement<TResource>
         : BehaviorExtensionElement
-        where TResource : IServiceBehavior
+        where TResource : class
     {
         private readonly Type behaviorType;
 
