@@ -43,31 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\WcfConfigExtensions\ActionMessageInspector.cs">
+    <Compile Include="..\WcfExtensions\ActionMessageInspector.cs">
       <Link>ActionMessageInspector.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\ActionServiceBehavior.cs">
+    <Compile Include="..\WcfExtensions\ActionServiceBehavior.cs">
       <Link>ActionServiceBehavior.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Configuration\ActionServiceBehaviorElement.cs">
+    <Compile Include="..\WcfExtensions\Configuration\ActionServiceBehaviorElement.cs">
       <Link>Configuration\ActionServiceBehaviorElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
+    <Compile Include="..\WcfExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
       <Link>Configuration\DefaultBehaviorExtensionElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Configuration\IBehaviorExtensionElement.cs">
+    <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Exceptions\ServiceArgumentException.cs">
+    <Compile Include="..\WcfExtensions\Exceptions\ServiceArgumentException.cs">
       <Link>Exceptions\ServiceArgumentException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Exceptions\ServiceBehaviorException.cs">
+    <Compile Include="..\WcfExtensions\Exceptions\ServiceBehaviorException.cs">
       <Link>Exceptions\ServiceBehaviorException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\Exceptions\WcfServiceException.cs">
+    <Compile Include="..\WcfExtensions\Exceptions\WcfServiceException.cs">
       <Link>Exceptions\WcfServiceException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfConfigExtensions\IServiceActionProvider.cs">
+    <Compile Include="..\WcfExtensions\IServiceActionProvider.cs">
       <Link>IServiceActionProvider.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
