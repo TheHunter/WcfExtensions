@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions", "WcfExtensions\WcfExtensions.csproj", "{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfConfigExtensions", "WcfConfigExtensions\WcfConfigExtensions.csproj", "{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.net40", "WcfExtensions.net40\WcfExtensions.net40.csproj", "{669F1066-56FA-4ACC-ADBC-90FA77CA237E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfConfigExtension.net40", "WcfConfigExtensions.net40\WcfConfigExtension.net40.csproj", "{669F1066-56FA-4ACC-ADBC-90FA77CA237E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
