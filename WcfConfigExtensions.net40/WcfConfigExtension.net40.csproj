@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WcfExtensions.net40</RootNamespace>
-    <AssemblyName>WcfExtensions.net40</AssemblyName>
+    <AssemblyName>WcfExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\WcfExtensions.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WcfExtensions.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -41,31 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\WcfExtensions\ActionMessageInspector.cs">
+    <Compile Include="..\WcfConfigExtensions\ActionMessageInspector.cs">
       <Link>ActionMessageInspector.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\ActionServiceBehavior.cs">
+    <Compile Include="..\WcfConfigExtensions\ActionServiceBehavior.cs">
       <Link>ActionServiceBehavior.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Configuration\ActionServiceBehaviorElement.cs">
+    <Compile Include="..\WcfConfigExtensions\Configuration\ActionServiceBehaviorElement.cs">
       <Link>Configuration\ActionServiceBehaviorElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
+    <Compile Include="..\WcfConfigExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
       <Link>Configuration\DefaultBehaviorExtensionElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
+    <Compile Include="..\WcfConfigExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Exceptions\ServiceArgumentException.cs">
+    <Compile Include="..\WcfConfigExtensions\Exceptions\ServiceArgumentException.cs">
       <Link>Exceptions\ServiceArgumentException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Exceptions\ServiceBehaviorException.cs">
+    <Compile Include="..\WcfConfigExtensions\Exceptions\ServiceBehaviorException.cs">
       <Link>Exceptions\ServiceBehaviorException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\Exceptions\WcfServiceException.cs">
+    <Compile Include="..\WcfConfigExtensions\Exceptions\WcfServiceException.cs">
       <Link>Exceptions\WcfServiceException.cs</Link>
     </Compile>
-    <Compile Include="..\WcfExtensions\IServiceActionProvider.cs">
+    <Compile Include="..\WcfConfigExtensions\IServiceActionProvider.cs">
       <Link>IServiceActionProvider.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
