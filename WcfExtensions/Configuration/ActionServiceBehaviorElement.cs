@@ -13,7 +13,6 @@ namespace WcfExtensions.Configuration
         : DefaultBehaviorExtensionElement<TBehavior>
         where TBehavior : class
     {
-
         /// <summary>
         /// 
         /// </summary>
