@@ -55,6 +55,9 @@
     <Compile Include="..\WcfExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
       <Link>Configuration\DefaultBehaviorExtensionElement.cs</Link>
     </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\DynamicBehaviorExtensionElement.cs">
+      <Link>Configuration\DynamicBehaviorExtensionElement.cs</Link>
+    </Compile>
     <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
     </Compile>
