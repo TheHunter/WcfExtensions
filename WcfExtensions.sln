@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions", "WcfExtensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.net40", "WcfExtensions.net40\WcfExtensions.net40.csproj", "{669F1066-56FA-4ACC-ADBC-90FA77CA237E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FF1A75DF-7948-4732-BEEC-812887606CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.net45", "WcfExtensions.net45\WcfExtensions.net45.csproj", "{A2E12813-B402-4271-8180-794E50E61CE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +25,17 @@ Global
 		{669F1066-56FA-4ACC-ADBC-90FA77CA237E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669F1066-56FA-4ACC-ADBC-90FA77CA237E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669F1066-56FA-4ACC-ADBC-90FA77CA237E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E12813-B402-4271-8180-794E50E61CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E12813-B402-4271-8180-794E50E61CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E12813-B402-4271-8180-794E50E61CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E12813-B402-4271-8180-794E50E61CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
+		{669F1066-56FA-4ACC-ADBC-90FA77CA237E} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
+		{A2E12813-B402-4271-8180-794E50E61CE5} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
 	EndGlobalSection
 EndGlobal

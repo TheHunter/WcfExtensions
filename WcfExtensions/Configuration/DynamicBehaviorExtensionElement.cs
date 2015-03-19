@@ -14,8 +14,8 @@ namespace WcfExtensions.Configuration
         : DefaultBehaviorExtensionElement<TBehavior>
         where TBehavior : class
     {
-        private IDictionary<string, string> attributes;
-        private HashSet<PropertyInfo> setters;
+        private readonly IDictionary<string, string> attributes;
+        private readonly HashSet<PropertyInfo> setters;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DynamicBehaviorExtensionElement{TBehavior}"/> class.
@@ -24,6 +24,14 @@ namespace WcfExtensions.Configuration
         {
             attributes = new Dictionary<string, string>();
             this.setters = new HashSet<PropertyInfo>(this.BehaviorType.GetProperties().Where(p => p.CanWrite));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override sealed Type BehaviorType
+        {
+            get { return base.BehaviorType; }
         }
 
         /// <summary>
@@ -41,28 +49,28 @@ namespace WcfExtensions.Configuration
 
             return true;
         }
-
+        
         /// <summary>
-        /// Creates the behavior.
+        /// 
         /// </summary>
-        /// <returns></returns>
-        protected override object CreateBehavior()
+        /// <param name="behavior"></param>
+        protected void InitializeBehavior(object behavior)
         {
-            var behavior = base.CreateBehavior();
-
             foreach (var element in attributes)
             {
                 PropertyInfo prop = setters.FirstOrDefault(n => n.Name.Equals(element.Key, StringComparison.InvariantCultureIgnoreCase));
+                if (prop == null) continue;
+                
                 Type propType = prop.PropertyType;
 
                 try
                 {
-                    object val = null;
-                    if (propType.Equals(typeof(string)))
+                    object val;
+                    if (propType == typeof(string))
                     {
                         val = element.Value;
                     }
-                    else if (propType.Equals(typeof(bool)))
+                    else if (propType == typeof(bool))
                     {
                         val = element.Value.Equals("1") || element.Value.Equals("true", StringComparison.InvariantCultureIgnoreCase);
                     }
@@ -80,6 +88,17 @@ namespace WcfExtensions.Configuration
                 {
                 }
             }
+        }
+
+        /// <summary>
+        /// Creates the behavior.
+        /// </summary>
+        /// <returns></returns>
+        protected override object CreateBehavior()
+        {
+            var behavior = base.CreateBehavior();
+            this.InitializeBehavior(behavior);
+            
             return behavior;
         }
     }
