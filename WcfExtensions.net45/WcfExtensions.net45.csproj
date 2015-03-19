@@ -56,6 +56,9 @@
     <Compile Include="..\WcfExtensions\Configuration\DynamicBehaviorExtensionElement.cs">
       <Link>Configuration\DynamicBehaviorExtensionElement.cs</Link>
     </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\GenericConfigCollection.cs">
+      <Link>Configuration\GenericConfigCollection.cs</Link>
+    </Compile>
     <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
     </Compile>
@@ -71,6 +74,7 @@
     <Compile Include="..\WcfExtensions\IServiceActionProvider.cs">
       <Link>IServiceActionProvider.cs</Link>
     </Compile>
+    <Compile Include="Configuration\ReferenceInfo.cs" />
     <Compile Include="Configuration\ScriptBehaviorExtensionElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -47,6 +47,7 @@
     <Compile Include="ActionMessageInspector.cs" />
     <Compile Include="Configuration\ActionServiceBehaviorElement.cs" />
     <Compile Include="Configuration\DynamicBehaviorExtensionElement.cs" />
+    <Compile Include="Configuration\GenericConfigCollection.cs" />
     <Compile Include="Configuration\IBehaviorExtensionElement.cs" />
     <Compile Include="Configuration\DefaultBehaviorExtensionElement.cs" />
     <Compile Include="Exceptions\ServiceArgumentException.cs" />

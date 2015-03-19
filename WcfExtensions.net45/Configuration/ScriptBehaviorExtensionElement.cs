@@ -6,14 +6,31 @@ using System.Threading.Tasks;
 
 namespace WcfExtensions.Configuration
 {
+    using System.Configuration;
+
+    /// <summary>
+    /// Class ScriptBehaviorExtensionElement.
+    /// </summary>
+    /// <typeparam name="TBehavior">The type of the t behavior.</typeparam>
     public class ScriptBehaviorExtensionElement<TBehavior>
         : DynamicBehaviorExtensionElement<TBehavior>
         where TBehavior : class
     {
         /// <summary>
-        /// 
+        /// Gets the references.
         /// </summary>
-        /// <returns></returns>
+        /// <value>The references.</value>
+        [ConfigurationProperty("references", IsDefaultCollection = false)]
+        [ConfigurationCollection(typeof(GenericConfigCollection<ReferenceInfo>))]
+        public GenericConfigCollection<ReferenceInfo> References
+        {
+            get { return (GenericConfigCollection<ReferenceInfo>)base["references"]; }
+        }
+
+        /// <summary>
+        /// Creates the behavior.
+        /// </summary>
+        /// <returns>System.Object.</returns>
         protected override object CreateBehavior()
         {
             /*
