@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ScriptingCompiler">
+      <HintPath>..\packages\ScriptingCompiler.1.0.0.1\lib\net45\ScriptingCompiler.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -50,6 +53,9 @@
     <Compile Include="..\WcfExtensions\Configuration\ActionServiceBehaviorElement.cs">
       <Link>Configuration\ActionServiceBehaviorElement.cs</Link>
     </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\ConfigTextElement.cs">
+      <Link>Configuration\ConfigTextElement.cs</Link>
+    </Compile>
     <Compile Include="..\WcfExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
       <Link>Configuration\DefaultBehaviorExtensionElement.cs</Link>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\ReferenceInfo.cs">
+      <Link>Configuration\ReferenceInfo.cs</Link>
     </Compile>
     <Compile Include="..\WcfExtensions\Exceptions\ServiceArgumentException.cs">
       <Link>Exceptions\ServiceArgumentException.cs</Link>
@@ -74,9 +83,11 @@
     <Compile Include="..\WcfExtensions\IServiceActionProvider.cs">
       <Link>IServiceActionProvider.cs</Link>
     </Compile>
-    <Compile Include="Configuration\ReferenceInfo.cs" />
     <Compile Include="Configuration\ScriptBehaviorExtensionElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

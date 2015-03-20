@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using TheHunter.Scripting;
+using WcfExtensions.Exceptions;
 
 namespace WcfExtensions.Configuration
 {
@@ -17,6 +20,15 @@ namespace WcfExtensions.Configuration
         where TBehavior : class
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [ConfigurationProperty("dynamicCodeCreator", IsRequired = true)]
+        protected ConfigTextElement DynamicCodeCreator
+        {
+            get { return base["dynamicCodeCreator"] as dynamic; }
+        }
+
+        /// <summary>
         /// Gets the references.
         /// </summary>
         /// <value>The references.</value>
@@ -24,7 +36,7 @@ namespace WcfExtensions.Configuration
         [ConfigurationCollection(typeof(GenericConfigCollection<ReferenceInfo>))]
         public GenericConfigCollection<ReferenceInfo> References
         {
-            get { return (GenericConfigCollection<ReferenceInfo>)base["references"]; }
+            get { return base["references"] as dynamic; }
         }
 
         /// <summary>
@@ -37,8 +49,28 @@ namespace WcfExtensions.Configuration
             Here I have to insert dynamic code for executing dynamic initializing 
              * about the behavior to instance.
             */
-            var behavior = new object();
+            if (this.BehaviorType == null)
+                throw new ServiceBehaviorException("The behavior type cannot be null");
 
+            var entryAss = Assembly.GetEntryAssembly();
+            var behAss = this.BehaviorType.Assembly;
+
+            List<Assembly> assemblies = new List<Assembly>
+            {
+                entryAss,
+                behAss
+            };
+
+            assemblies.AddRange(entryAss.GetReferencedAssemblies()
+                .Select(Assembly.Load));
+
+            assemblies.AddRange(behAss.GetReferencedAssemblies()
+                .Select(Assembly.Load));
+
+            ScriptHosting scripHost = new ScriptHosting(this.References.OfType<string>(), assemblies);
+            var behavior = scripHost.Execute<TBehavior>(this.DynamicCodeCreator.Value);
+
+            //var behavior = base.CreateBehavior();
 
             this.InitializeBehavior(behavior);
             return behavior;

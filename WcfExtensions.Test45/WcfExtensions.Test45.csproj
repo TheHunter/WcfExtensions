@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{4FA3AA52-F8F1-42DA-9800-A852B4C95C57}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WcfExtensions</RootNamespace>
-    <AssemblyName>WcfExtensions</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>WcfExtensions.Test45</RootNamespace>
+    <AssemblyName>WcfExtensions.Test45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,42 +21,58 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\WcfExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\WcfExtensions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptingCompiler">
+      <HintPath>..\packages\ScriptingCompiler.1.0.0.1\lib\net45\ScriptingCompiler.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WcfJsonFormatter">
+      <HintPath>..\packages\WcfJsonFormatter.1.2.2.10\lib\net40\WcfJsonFormatter.dll</HintPath>
+    </Reference>
+    <Reference Include="WcfJsonNetFormatter">
+      <HintPath>..\packages\WcfJsonNetFormatter.1.2.5.5\lib\net40\WcfJsonNetFormatter.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionServiceBehavior.cs" />
-    <Compile Include="ActionMessageInspector.cs" />
-    <Compile Include="Configuration\ActionServiceBehaviorElement.cs" />
-    <Compile Include="Configuration\ConfigTextElement.cs" />
-    <Compile Include="Configuration\DynamicBehaviorExtensionElement.cs" />
-    <Compile Include="Configuration\GenericConfigCollection.cs" />
-    <Compile Include="Configuration\IBehaviorExtensionElement.cs" />
-    <Compile Include="Configuration\DefaultBehaviorExtensionElement.cs" />
-    <Compile Include="Configuration\ReferenceInfo.cs" />
-    <Compile Include="Exceptions\ServiceArgumentException.cs" />
-    <Compile Include="Exceptions\ServiceBehaviorException.cs" />
-    <Compile Include="Exceptions\WcfServiceException.cs" />
-    <Compile Include="IServiceActionProvider.cs" />
+    <Compile Include="EmptyClass.cs" />
+    <Compile Include="TestService.cs" />
+    <Compile Include="WcfHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="WcfServiceTypeSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WcfExtensions.net45\WcfExtensions.net45.csproj">
+      <Project>{a2e12813-b402-4271-8180-794e50e61ce5}</Project>
+      <Name>WcfExtensions.net45</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,7 +12,11 @@ namespace WcfExtensions.Configuration
         /// Gets or sets the reference.
         /// </summary>
         /// <value>The reference.</value>
-        [ConfigurationProperty("reference", IsRequired = true)]
-        public string Reference { get; set; }
+        [ConfigurationProperty("namespace", IsRequired = true)]
+        public string Namespace
+        {
+            get { return this["namespace"] as string; }
+            set { this["namespace"] = value; }
+        }
     }
 }

@@ -52,6 +52,9 @@
     <Compile Include="..\WcfExtensions\Configuration\ActionServiceBehaviorElement.cs">
       <Link>Configuration\ActionServiceBehaviorElement.cs</Link>
     </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\ConfigTextElement.cs">
+      <Link>Configuration\ConfigTextElement.cs</Link>
+    </Compile>
     <Compile Include="..\WcfExtensions\Configuration\DefaultBehaviorExtensionElement.cs">
       <Link>Configuration\DefaultBehaviorExtensionElement.cs</Link>
     </Compile>
@@ -63,6 +66,9 @@
     </Compile>
     <Compile Include="..\WcfExtensions\Configuration\IBehaviorExtensionElement.cs">
       <Link>Configuration\IBehaviorExtensionElement.cs</Link>
+    </Compile>
+    <Compile Include="..\WcfExtensions\Configuration\ReferenceInfo.cs">
+      <Link>Configuration\ReferenceInfo.cs</Link>
     </Compile>
     <Compile Include="..\WcfExtensions\Exceptions\ServiceArgumentException.cs">
       <Link>Exceptions\ServiceArgumentException.cs</Link>
