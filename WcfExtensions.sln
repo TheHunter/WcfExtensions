@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions", "WcfExtensions\WcfExtensions.csproj", "{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.net40", "WcfExtensions.net40\WcfExtensions.net40.csproj", "{669F1066-56FA-4ACC-ADBC-90FA77CA237E}"
@@ -12,6 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.net45", "WcfExtensions.net45\WcfExtensions.net45.csproj", "{A2E12813-B402-4271-8180-794E50E61CE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExtensions.Test45", "WcfExtensions.Test45\WcfExtensions.Test45.csproj", "{4FA3AA52-F8F1-42DA-9800-A852B4C95C57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A4938ACC-0242-4BFA-BD13-6440AE904BFE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,8 +49,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{669F1066-56FA-4ACC-ADBC-90FA77CA237E} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
 		{4CD6E1BF-5FE5-4C81-8396-29C87FD4AD25} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
+		{669F1066-56FA-4ACC-ADBC-90FA77CA237E} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
 		{A2E12813-B402-4271-8180-794E50E61CE5} = {2E4D87F3-F81D-47B9-853A-6B1CD62B6AF3}
 		{4FA3AA52-F8F1-42DA-9800-A852B4C95C57} = {FF1A75DF-7948-4732-BEEC-812887606CBE}
 	EndGlobalSection

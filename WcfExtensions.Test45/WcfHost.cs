@@ -28,8 +28,6 @@ namespace WcfExtensions.Test45
 
             using (ServiceHost serviceHost = new ServiceHost(typeof(Service)))
             {
-                //serviceHost.AddDependencyInjectionBehavior<ITest>(AutofacHostFactory.Container);
-
                 Console.WriteLine("Opening the host");
                 serviceHost.Open();
 
